@@ -1,16 +1,16 @@
 
 var translator = function(english) {
+var vowel = /[aeiou]/
 
-
-    if (english.startsWith("a")) {
-    return english.toUpperCase();
+    if (english.slice(0,1).match(vowel)) {
+    return english + "ay";
 
   } else if (english.includes("s")){
-    return english + "ay";
+    return english + "at";
 
   }
   else {
-      return english;
+      return false;
     }
 
 };
